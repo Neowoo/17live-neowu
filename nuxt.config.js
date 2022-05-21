@@ -33,10 +33,15 @@ export default {
     // '@nuxtjs/eslint-module'
   ],
 
+  svgSprite: {
+    // manipulate module options
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/svg-sprite'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

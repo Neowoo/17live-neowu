@@ -1,6 +1,8 @@
 <template>
   <div>
     <Header/>
+    <ListBoard/>
+    <Loading/>
   </div>
 </template>
 
@@ -12,5 +14,8 @@ export default {
 <style lang="scss">
 * {
   margin: 0;
+}
+body {
+  background-color: #e5e5e5;
 }
 </style>
