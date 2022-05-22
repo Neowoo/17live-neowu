@@ -1,5 +1,11 @@
 # 17live-neowu
 
+巫弘毅Neo 面試前測. 
+此todo-list含. 
+i18n. 
+svg-component. 
+scss global-style應用. 
+
 ## Build Setup
 
 ```bash
