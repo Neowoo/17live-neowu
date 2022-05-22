@@ -1,4 +1,5 @@
 import i18n from './plugins/i18n'
+import { resolve } from 'path'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -24,6 +25,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    "@/plugins/svg-icon"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,7 +53,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/svg-sprite',
     '@nuxtjs/i18n'
   ],
   i18n: {
@@ -71,5 +72,19 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config, ctx) {
+      // 排除 nuxt 原配置的影響,Nuxt 默認有vue-loader,會處理svg,img等
+      // 找到匹配.svg的規則,然後將存放svg文件的目錄排除
+      const svgRule = config.module.rules.find(rule => rule.test.test(".svg"));
+      svgRule.exclude = [resolve(__dirname, "assets/icons/svg")];
+      //添加loader規則
+      config.module.rules.push({
+        test: /\.svg$/, // 匹配.svg
+        include: [resolve(__dirname, "assets/icons/svg")], // 將存放svg的目錄加入到loader處理目錄
+        use: [
+          {loader: "svg-sprite-loader", options: {symbolId: "icon-[name]"}}
+        ]
+      });
+    }
   }
 }

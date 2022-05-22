@@ -5,7 +5,9 @@
       <span class="checkmark"></span>
       <span class="text-content">{{ this.info.content }}</span>
     </label>
-    <img class="delete" @click="deleteRow" src="~/static/images/svg/trash-can.svg" width="24" height="24" alt="">
+    <div class="delete" @click="deleteRow" >
+      <svg-icon icon-class="trash-can" width="24px" height="24px"/>
+    </div>
   </div>
 </template>
 <script>

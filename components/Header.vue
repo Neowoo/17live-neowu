@@ -1,11 +1,12 @@
 <template>
   <div class="header">
     <div class="menu">
-      <img src="~/static/images/svg/burger.svg" width="32" height="24.5" alt="">
-      {{ $t('handsUp') }}
+      <svg-icon icon-class="burger" width="32px" height="24px"/>
+      <span>
+        {{ $t('handsUp') }}
+      </span>
     </div>
-    <img class="logout" src="~/static/images/svg/logout.svg" width="32" height="24.5" alt="">
-<!--    <svg-icon name="burger" />-->
+    <svg-icon icon-class="logout" width="32px" height="24.5px"/>
   </div>
 </template>
 <script>
@@ -28,7 +29,13 @@
       font-weight: 400;
       text-align: left;
       color: $white;
-      flex: 0 1 auto
+      flex: 0 1 auto;
+      @include align-center;
+      &::v-deep {
+        .svg-icon {
+          margin-right: 25px;
+        }
+      }
     }
     .logout {
       flex: 0 1 auto;

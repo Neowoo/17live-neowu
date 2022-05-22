@@ -1,7 +1,9 @@
 <template>
   <div class="list-input">
     <input type="text" placeholder="請輸入要做的事情" v-model="todo" @keypress="sendDataByKey">
-    <button @click="sendData"><img src="~/static/images/svg/add.svg" width="21" height="18.38" alt=""></button>
+    <button @click="sendData">
+      <svg-icon icon-class="add" width="21px" height="18.38px"/>
+    </button>
   </div>
 </template>
 <script>

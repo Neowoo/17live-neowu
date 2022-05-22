@@ -27,6 +27,7 @@ export default {
     border: $gray;
     padding: 15px 15px 10px;
     box-sizing: border-box;
+    border-radius: 4px;
     .title {
       margin-left: 18px;
       font-size: 36px;
