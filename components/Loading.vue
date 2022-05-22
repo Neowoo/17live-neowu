@@ -3,10 +3,10 @@
     <div class="load-wrap">
       <div class="loader"></div>
       <div class="wavy">
-        <span style="--i:1">列</span>
-        <span style="--i:2">表</span>
-        <span style="--i:3">新</span>
-        <span style="--i:4">增</span>
+        <span style="--i:1">資</span>
+        <span style="--i:2">料</span>
+        <span style="--i:3">更</span>
+        <span style="--i:4">新</span>
         <span style="--i:5">中</span>
         <span style="--i:6">.</span>
         <span style="--i:7">.</span>

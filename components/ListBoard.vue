@@ -1,6 +1,6 @@
 <template>
   <div class="list-board">
-    <div class="title">Todo List</div>
+    <div class="title">{{ $t('todoList') }}</div>
     <div class="item-container">
       <ListItem v-for="info in listInfo" :key="info.id" :info="info"/>
     </div>

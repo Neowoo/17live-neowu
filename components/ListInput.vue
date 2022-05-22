@@ -1,6 +1,6 @@
 <template>
   <div class="list-input">
-    <input type="text" placeholder="請輸入要做的事情" v-model="todo" @keyup="sendDataByKey">
+    <input type="text" placeholder="請輸入要做的事情" v-model="todo" @keypress="sendDataByKey">
     <button @click="sendData"><img src="~/static/images/svg/add.svg" width="21" height="18.38" alt=""></button>
   </div>
 </template>

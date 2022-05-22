@@ -2,7 +2,7 @@
   <div class="header">
     <div class="menu">
       <img src="~/static/images/svg/burger.svg" width="32" height="24.5" alt="">
-      HandsUP
+      {{ $t('handsUp') }}
     </div>
     <img class="logout" src="~/static/images/svg/logout.svg" width="32" height="24.5" alt="">
 <!--    <svg-icon name="burger" />-->
