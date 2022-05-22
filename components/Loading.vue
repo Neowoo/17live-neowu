@@ -33,19 +33,17 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     justify-content: center;
-    align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
+    @include align-center;
     .load-wrap {
-      display: flex;
       flex-direction: column;
-      align-items: center;
+      @include align-center;
     }
     .loader {
       border: 8px solid #FFF;
       border-radius: 50%;
-      border-top: 8px solid #8DC8FF;
+      border-top: 8px solid $theme-blue;
       width: 60px;
       height: 60px;
       margin-bottom: 20px;
@@ -58,7 +56,7 @@ export default {
       span{
         position: relative;
         display: inline-block;
-        color: #8DC8FF;
+        color: $theme-blue;
         font-size: 18px;
         animation: bounce 1s ease-in-out infinite;
         animation-delay: calc(.1s*var(--i))
@@ -76,7 +74,7 @@ export default {
 
 
       span {
-        color: #8DC8FF;
+        color: $theme-blue;
         position: relative;
         animation: bounce 1s ease-in-out infinite;
         animation-delay: calc(.1s * var(--i))

@@ -17,6 +17,7 @@ export default {
     ]
   },
 
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -32,7 +33,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module'
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: [
+      './assets/scss/vars/*.scss',
+      './assets/scss/mixin/_mixins.scss'
+      // './assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
+    ]
+  },
 
   svgSprite: {
     // manipulate module options

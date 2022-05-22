@@ -16,19 +16,18 @@
     z-index: 1;
     position: fixed;
     top: 0;
-    background-color: #8DC8FF;
+    background-color: $theme-blue;
     width: 100%;
     height: 55px;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 11px;
+    @include align-center;
     .menu {
       font-size: 36px;
       font-weight: 400;
       text-align: left;
-      color: #FFF;
+      color: $white;
       flex: 0 1 auto
     }
     .logout {

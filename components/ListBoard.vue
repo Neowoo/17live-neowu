@@ -23,8 +23,8 @@ export default {
     top: 71px;
     left: 50%;
     transform: translatex(-50%);
-    background-color: #FFF;
-    border: #C7C3C6;
+    background-color: $white;
+    border: $gray;
     padding: 15px 15px 10px;
     box-sizing: border-box;
     .title {

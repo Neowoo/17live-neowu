@@ -28,18 +28,17 @@ export default {
 </script>
 <style lang="scss" scoped>
   .list-input {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    @include align-center;
     input {
       flex: 1 0 auto;
-      border: 1px solid #C7C3C6;
+      border: 1px solid $gray;
       height: 34px;
       box-sizing: border-box;
       padding-left: 14px;
       border-radius: 4px;
       &::placeholder {
-        color: #C1C1C1;
+        color: $deep-gray;
       }
       &:focus {
         outline: none;
@@ -51,11 +50,10 @@ export default {
       height: 34px;
       border: none;
       border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
       justify-content: center;
-      background-color: #8DC8FF;
+      background-color: $theme-blue;
       cursor: pointer;
+      @include align-center;
     }
   }
 </style>

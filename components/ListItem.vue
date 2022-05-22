@@ -32,22 +32,14 @@ export default {
 .list-item {
   width: 100%;
   margin-bottom: 65.75px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  @include align-center;
   input {
     flex: 0 1 auto;
     width: 22px;
     height: 19.25px;
-    border: 1px solid #C7C3C6;
-    &:checked {
-      color: red;
-    }
-    &[type=checkbox]:checked {
-      color: yellow;
-      background-color: #444;
-    }
+    border: 1px solid $gray;
   }
   .text-content {
     margin-left: 32px;
@@ -81,14 +73,14 @@ export default {
       height: 0;
       width: 0;
       &:checked ~ .checkmark {
-        border-color: #8DC8FF;
+        border-color: $theme-blue;
         &:after {
           display: block;
-          border-color: #8DC8FF;
+          border-color: $theme-blue;
         }
       }
       &:checked ~ .text-content {
-        color: #8DC8FF;
+        color: $theme-blue;
       }
     }
   }
@@ -100,7 +92,7 @@ export default {
     left: 0;
     height: 19.25px;
     width: 22px;
-    border: 2px solid #C7C3C6;
+    border: 2px solid $gray;
     border-radius: 3px;
     &:after {
       content: "";
